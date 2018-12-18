@@ -1,8 +1,10 @@
 /*
- * Projecto em linguagem C
- * Autor: Ricardo Duarte
- * Copyright © 2018 Ricardo Duarte.  All rights reserved.
+ * Projecto de grupo em linguagem C
+ * Disciplina: Programação
+ * Curso: SEC 1º Ano
+ * Autores: Ricardo Duarte, Pedro Lima e Luis Moreira
  */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -16,28 +18,21 @@ typedef struct{
 
 admin * adm_header = NULL;
 
-void user_setup();
+void user_setup(int *reg);
 char *tokenGenerator(char token[]);
-void check_Admin();
-void writeAdm();
-void readAdm();
+void check_Admin(int *reg);
+
 
 int main()
 {
-    //int regis = 0;
-    while(1) {
-        if (adm_header == NULL) {
-            user_setup();
-        } else if (adm_header != NULL) {
-            check_Admin();
-        }
-    }
+    int regis = 0;
+    user_setup(&regis);
+    //check_Admin(&regis);
     //printf("The token is :%s\n", tokenGenerator(token));
-
 }
 
 
-void user_setup(){
+void user_setup(int *reg){
     admin *new_Adm =(admin*)malloc(sizeof(admin));
     char token[20];
     printf("There is no user set up yet\n");
@@ -45,31 +40,30 @@ void user_setup(){
     scanf("%s",new_Adm->user);
     printf("Register your password (max. of 20 chars.):\n");
     scanf("%s",new_Adm->password);
-    printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
-    printf("REFTOKEN: %s\n", tokenGenerator(token));
-    //writeAdm();
+    //printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
+    //printf("REFTOKEN: %s\n", tokenGenerator(token));
     new_Adm->next = adm_header;
     adm_header = new_Adm;
+    *reg = 1;
     }
 
-void check_Admin(){
+void check_Admin(int *reg){
     char adm[20];
     char psswd[20];
-    int valve = 1;
     printf("Let\'s check your identity\n");
     printf("User:\n");
     scanf("%s",adm);
     printf("Password:\n");
     scanf("%s",psswd);
-    while(valve != 2)
+    while(reg != 2)
     if(strcmp(adm , adm_header->user) == 0 && strcmp(psswd, adm_header->password)==0){
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);
-            valve = 2;
+            *reg = 2;
         }
-        else{
+    else{
             printf("Wrong user or password\n");
-            valve = 1;
+            check_Admin(reg);
         }
     }
 
@@ -86,44 +80,6 @@ char *tokenGenerator(char token[])
     return token;
 }
 
-void writeAdm(){
-    admin *pt = adm_header;
-    FILE *fptr;
-    fptr = fopen ("admins.b","wb");
-
-    if(fptr == NULL){
-        printf("Error no such file found\n");
-        return;
-    }
-    while(pt != NULL){
-        fwrite(pt, sizeof(admin), 1, fptr);
-        pt = pt->next;
-    }
-
-    fclose(pt);
-
-}
-
-void readAdm(){
-    FILE *fptr;
-    fptr = fopen ("admins.b","rb");
-
-    if(fptr == NULL){
-        printf("Error no such file found\n");
-        return;
-    }
-
-    while (1){
-        admin *newadmin = malloc(sizeof(admin));
-        if (fread(newadmin, sizeof(admin),1,fptr)==0 ){
-            fclose(fptr);
-            return;
-        }
-        newadmin->next = adm_header;
-        adm_header = newadmin;
-    }
-    fclose(fptr);
-}
 
 
 

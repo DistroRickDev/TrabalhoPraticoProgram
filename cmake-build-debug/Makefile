@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Antigo_Disco\Documentos\C_PROGRAMING\Login_w_struct
+CMAKE_SOURCE_DIR = E:\Antigo_Disco\Documentos\C_PROGRAMING\TrabalhoPraticoProgram
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Antigo_Disco\Documentos\C_PROGRAMING\Login_w_struct\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Antigo_Disco\Documentos\C_PROGRAMING\TrabalhoPraticoProgram\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Antigo_Disco\Documentos\C_PROGRAMING\Login_w_struct\cmake-build-debug\CMakeFiles E:\Antigo_Disco\Documentos\C_PROGRAMING\Login_w_struct\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Antigo_Disco\Documentos\C_PROGRAMING\TrabalhoPraticoProgram\cmake-build-debug\CMakeFiles E:\Antigo_Disco\Documentos\C_PROGRAMING\TrabalhoPraticoProgram\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Antigo_Disco\Documentos\C_PROGRAMING\Login_w_struct\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Antigo_Disco\Documentos\C_PROGRAMING\TrabalhoPraticoProgram\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

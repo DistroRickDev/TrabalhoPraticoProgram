@@ -1,3 +1,3 @@
-E:/Antigo_Disco/Documentos/C_PROGRAMING/Login_w_struct/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/Antigo_Disco/Documentos/C_PROGRAMING/Login_w_struct/cmake-build-debug/CMakeFiles/Login_w_struct.dir
-E:/Antigo_Disco/Documentos/C_PROGRAMING/Login_w_struct/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/rebuild_cache.dir
