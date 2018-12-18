@@ -11,8 +11,8 @@
 #include <time.h>
 
 typedef struct{
-    char *user;
-    char *password;
+    char user[20];
+    char password[20];
     struct admin *next;
 }admin;
 
@@ -27,7 +27,7 @@ int main()
 {
     int regis = 0;
     user_setup(&regis);
-    //check_Admin(&regis);
+    check_Admin(&regis);
     //printf("The token is :%s\n", tokenGenerator(token));
 }
 
@@ -55,7 +55,7 @@ void check_Admin(int *reg){
     scanf("%s",adm);
     printf("Password:\n");
     scanf("%s",psswd);
-    while(reg != 2)
+    while(*reg != 2)
     if(strcmp(adm , adm_header->user) == 0 && strcmp(psswd, adm_header->password)==0){
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);
