@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Antigo_Disco/Documentos/C_PROGRAMING/Login_w_struct/main.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+time.h
+-
+
