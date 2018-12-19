@@ -122,6 +122,33 @@ Login_w_struct/fast:
 	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/build
 .PHONY : Login_w_struct/fast
 
+admin_setup.obj: admin_setup.c.obj
+
+.PHONY : admin_setup.obj
+
+# target to build an object file
+admin_setup.c.obj:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_setup.c.obj
+.PHONY : admin_setup.c.obj
+
+admin_setup.i: admin_setup.c.i
+
+.PHONY : admin_setup.i
+
+# target to preprocess a source file
+admin_setup.c.i:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_setup.c.i
+.PHONY : admin_setup.c.i
+
+admin_setup.s: admin_setup.c.s
+
+.PHONY : admin_setup.s
+
+# target to generate assembly for a file
+admin_setup.c.s:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_setup.c.s
+.PHONY : admin_setup.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... Login_w_struct
 	@echo ... rebuild_cache
+	@echo ... admin_setup.obj
+	@echo ... admin_setup.i
+	@echo ... admin_setup.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

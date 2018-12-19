@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c">
+			<Option target="Login_w_struct"/>
+		</Unit>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h">
+			<Option target="Login_w_struct"/>
+		</Unit>
 		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c">
 			<Option target="Login_w_struct"/>
 		</Unit>

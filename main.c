@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include "admin_setup.h"
 
 typedef struct{
     char user[20];
@@ -25,13 +26,14 @@ void check_Admin(int *reg);
 
 int main()
 {
+    char token[20];
     int regis = 0;
     user_setup(&regis);
     check_Admin(&regis);
     //printf("The token is :%s\n", tokenGenerator(token));
 }
 
-
+//escrever num binario
 void user_setup(int *reg){
     admin *new_Adm =(admin*)malloc(sizeof(admin));
     char token[20];
@@ -67,18 +69,6 @@ void check_Admin(int *reg){
         }
     }
 
-char *tokenGenerator(char token[])
-{
-    srand(time(NULL));
-    int index = 0;
-    while (index < 20)
-    {
-        int limit = rand()%(127 + 1 - 48) + 48;
-        token[index] = (char)limit;
-        index++;
-    }
-    return token;
-}
 
 
 
