@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+time.h
+-
+admin_setup.h
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
+
 E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
 
 E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c
