@@ -11,13 +11,6 @@
 #include <time.h>
 #include "admin_setup.h"
 
-
-
-void user_setup(int *reg);
-char *tokenGenerator(char token[]);
-void check_Admin(int *reg);
-
-
 int main()
 {
     char token[20];
