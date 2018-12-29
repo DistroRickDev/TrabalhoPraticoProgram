@@ -13,11 +13,10 @@
 
 int main()
 {
-    char token[20];
-    int regis = 0;
-    user_setup(&regis);
-    check_Admin(&regis);
-    //printf("The token is :%s\n", tokenGenerator(token));
+    readAdm();
+    listAdm();
+    //userSetup();
+
 }
 
 
