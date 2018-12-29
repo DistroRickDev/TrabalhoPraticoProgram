@@ -13,9 +13,11 @@
 
 int main()
 {
+    int reg = 0;
+    reg = readReg(&reg);
     readAdm();
-    listAdm();
-    //userSetup();
+    //listAdm();
+    userSetup(&reg);
 
 }
 

@@ -12,8 +12,8 @@ typedef struct{
 
 admin * adm_header = NULL;
 
-void userSetup(int *reg)
-{
+void userSetup(int *reg) {
+    if (reg == 0){
     admin *new_Adm = (admin *) malloc(sizeof(admin));
     char token[20] = "";
     printf("There is no user set up yet\n");
@@ -24,15 +24,19 @@ void userSetup(int *reg)
     new_Adm->next = adm_header;
     adm_header = new_Adm;
     admWrite();
+    *reg = 1;
+    writeReg(reg);
     /*
     printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
     printf("REFTOKEN: %s\n", tokenGenerator(token));
     */
-
+    }
+    else{
+        checkAdmin(reg);
+    }
 }
 
-void checkAdmin() {
-    int swap = 0;
+void checkAdmin(int *reg) {
     char adm[20];
     char psswd[20];
     printf("Let\'s check your identity\n");
@@ -40,15 +44,15 @@ void checkAdmin() {
     scanf("%s", adm);
     printf("Password:\n");
     scanf("%s", psswd);
-    while (swap != 1) {
+    while (*reg != 2) {
         if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);
-            swap = 1;
+            *reg = 2;
 
         } else {
             printf("Wrong user or password\n");
-            checkAdmin();
+            checkAdmin(reg);
         }
     }
 }
@@ -101,6 +105,30 @@ void listAdm(){
 
         ptr = ptr->next;
     }
+}
+
+int writeReg(int *reg)
+{
+    FILE *fptr;
+    fptr = fopen("reg.bin", "wb");
+    if(fptr == NULL){
+        printf("No such file found");
+        return *reg;
+    }
+    fwrite(reg, sizeof(reg), 1, fptr);
+    return *reg;
+}
+
+int readReg(int *reg)
+{
+    FILE *fptr;
+    fptr = fopen("reg.bin", "rb");
+    if(fptr == NULL){
+        printf("No such file found");
+        return *reg;
+    }
+    fread(reg, sizeof(reg), 1, fptr);
+    return *reg;
 }
 
 /*
