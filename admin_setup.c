@@ -131,17 +131,32 @@ int readReg(int *reg)
     return *reg;
 }
 
-/*
-char *tokenGenerator(char token[])
+
+char tokenGenerator(char token[])
 {
-    time_t t;
-    srand((unsigned) time(&t));
+    srand(time(0));
     int index = 0;
     while (index < 20)
     {
-        int limit = rand()%(127 + 1 - 48) + 48;
-        token[index] = (char)limit;
-        index++;
+        int limit = rand()%122;
+            if(limit >=48 && limit<=57)
+            {
+                token[index] = (char)limit;
+                index++;
+            }
+            else if(limit >=65 && limit<=90)
+            {
+                token[index] = (char)limit;
+                index++;
+            }
+            else if(limit >=97 && limit<=122)
+            {
+                token[index] = (char)limit;
+                index++;
+            }
+            else{
+            continue;
+            }
     }
-    return token;
-}*/
+    return *token;
+}

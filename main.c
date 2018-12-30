@@ -13,12 +13,14 @@
 
 int main()
 {
+    char token[21] = "";
     int reg = 0;
     reg = readReg(&reg);
     readAdm();
-    //listAdm();
-    userSetup(&reg);
-
+    listAdm();
+    //userSetup(&reg);
+    token[21] = tokenGenerator(token);
+    printf("%s\n", token);
 }
 
 
