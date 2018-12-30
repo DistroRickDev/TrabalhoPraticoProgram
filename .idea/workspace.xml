@@ -35,10 +35,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e626c879-50d4-4fd7-b95c-27ccde5c99b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Login_w_struct.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Login_w_struct.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Login_w_struct.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -59,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="e#146#164#0" expanded="true" />
               </folding>
@@ -80,8 +76,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin_setup.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="629">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,8 +93,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin_setup.c" />
         <option value="$PROJECT_DIR$/admin_setup.h" />
+        <option value="$PROJECT_DIR$/admin_setup.c" />
         <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
@@ -130,7 +129,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -193,7 +192,8 @@
       <workItem from="1546105641579" duration="73000" />
       <workItem from="1546115850907" duration="1725000" />
       <workItem from="1546178986219" duration="2254000" />
-      <workItem from="1546183165013" duration="330000" />
+      <workItem from="1546183165013" duration="553000" />
+      <workItem from="1546183738746" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;A função user setup precisa ser corrigda causa segmentation fault ao defenir o user&quot;">
       <created>1545173141210</created>
@@ -258,16 +258,23 @@
       <option name="project" value="LOCAL" />
       <updated>1546180536359</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="user: root&#10;password: root">
+      <created>1546183663869</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546183663870</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24748000" />
+    <option name="totallyTimeSpent" value="26508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34169054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34670487" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,14 +309,15 @@
     <MESSAGE value="&quot;Função token generator num ficheiro header&quot;" />
     <MESSAGE value="&quot;Todas as funçoes referentes estao no admin_setup.c e admin_setup.h em falta encontra-se registo em ficheiro binario do user e da password e do registo&quot;" />
     <MESSAGE value="&quot;It already checks if there is a user and password registered&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;It already checks if there is a user and password registered&quot;" />
+    <MESSAGE value="user: root&#10;password: root" />
+    <option name="LAST_COMMIT_MESSAGE" value="user: root&#10;password: root" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/admin_setup.c</url>
-          <line>136</line>
+          <line>137</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -328,15 +336,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin_setup.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="629">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="323">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="e#146#164#0" expanded="true" />
           </folding>
