@@ -17,10 +17,10 @@ int main()
     int reg = 0;
     reg = readReg(&reg);
     readAdm();
-    listAdm();
-    //userSetup(&reg);
-    token[21] = tokenGenerator(token);
-    printf("%s\n", token);
+    //listAdm();
+    userSetup(&reg);
+    /*token[21] = tokenGenerator(token);
+    printf("%s\n", token);*/
 }
 
 

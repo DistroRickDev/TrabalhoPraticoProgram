@@ -14,27 +14,28 @@ admin * adm_header = NULL;
 
 void userSetup(int *reg) {
     if (reg == 0){
-    admin *new_Adm = (admin *) malloc(sizeof(admin));
-    char token[20] = "";
-    printf("There is no user set up yet\n");
-    printf("Register your user name (max. of 20 chars.):\n");
-    scanf("%s", new_Adm->user);
-    printf("Register your password (max. of 20 chars.):\n");
-    scanf("%s", new_Adm->password);
-    new_Adm->next = adm_header;
-    adm_header = new_Adm;
-    admWrite();
-    *reg = 1;
-    writeReg(reg);
-    /*
-    printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
-    printf("REFTOKEN: %s\n", tokenGenerator(token));
-    */
+        admin *new_Adm = (admin *) malloc(sizeof(admin));
+        char token[20] = "";
+        printf("There is no user set up yet\n");
+        printf("Register your user name (max. of 20 chars.):\n");
+        scanf("%s", new_Adm->user);
+        printf("Register your password (max. of 20 chars.):\n");
+        scanf("%s", new_Adm->password);
+        new_Adm->next = adm_header;
+        adm_header = new_Adm;
+        admWrite();
+        *reg = 1;
+        writeReg(reg);
+        /*
+        printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
+        printf("REFTOKEN: %s\n", tokenGenerator(token));
+        */
+        }
+        else{
+            checkAdmin(reg);
+        }
     }
-    else{
-        checkAdmin(reg);
-    }
-}
+
 
 void checkAdmin(int *reg) {
     char adm[20];
