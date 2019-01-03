@@ -10,5 +10,7 @@ void admWrite();
 void readAdm();
 int writeReg(int *reg);
 int readReg(int *reg);
+char *writeToken(char token[]);
+char *readToken(char token[]);
 
 #endif //LOGIN_W_STRUCT_ADMIN_SETUP_H

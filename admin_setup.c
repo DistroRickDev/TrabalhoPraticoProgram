@@ -13,9 +13,10 @@ typedef struct{
 admin * adm_header = NULL;
 
 void userSetup(int *reg) {
-    if (reg == 0){
+    if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
-        char token[20] = "";
+        char token[21] = "";
+        token[21] = tokenGenerator(token);
         printf("There is no user set up yet\n");
         printf("Register your user name (max. of 20 chars.):\n");
         scanf("%s", new_Adm->user);
@@ -26,15 +27,15 @@ void userSetup(int *reg) {
         admWrite();
         *reg = 1;
         writeReg(reg);
-        /*
-        printf("You have 60 seconds take not of your token in case you wan't to restart your password\n");
-        printf("REFTOKEN: %s\n", tokenGenerator(token));
-        */
-        }
-        else{
+        printf("You have 30 seconds take not of your token in case you wan't to restart your password\n");
+        printf("REFTOKEN: %s\n", token);
+        (long)time(30);//it will wait 30 seconds
+        system("cls");
+    }
+    else{
             checkAdmin(reg);
         }
-    }
+}
 
 
 void checkAdmin(int *reg) {
@@ -64,7 +65,7 @@ void admWrite()
     FILE *fptr;
     fptr = fopen("admin.bin", "wb");
     if(fptr == NULL){
-        printf("No such file found");
+        printf("No such file found\n");
         return;
     }
     while(newadm != NULL){
@@ -79,7 +80,7 @@ void readAdm()
     FILE *fptr;
     fptr = fopen("admin.bin", "rb");
     if(fptr == NULL){
-        printf("No such file found");
+        printf("No such file found\n");
         return;
     }
     while (1){
@@ -113,7 +114,7 @@ int writeReg(int *reg)
     FILE *fptr;
     fptr = fopen("reg.bin", "wb");
     if(fptr == NULL){
-        printf("No such file found");
+        printf("No such file found\n");
         return *reg;
     }
     fwrite(reg, sizeof(reg), 1, fptr);
@@ -125,7 +126,8 @@ int readReg(int *reg)
     FILE *fptr;
     fptr = fopen("reg.bin", "rb");
     if(fptr == NULL){
-        printf("No such file found");
+        printf("No such file found\n");
+        *reg = 0;
         return *reg;
     }
     fread(reg, sizeof(reg), 1, fptr);
@@ -160,4 +162,28 @@ char tokenGenerator(char token[])
             }
     }
     return *token;
+}
+
+char *writeToken(char token[])
+{
+    FILE *fptr;
+    fptr = fopen("token.bin", "wb");
+    if(fptr == NULL){
+        printf("No such file found\n");
+        return(NULL);
+    }
+    fwrite(token, strlen(token), 1, fptr);
+    return token;
+}
+
+char *readToken(char token[])
+{
+    FILE *fptr;
+    fptr = fopen("token.bin", "rb");
+    if(fptr == NULL){
+        printf("No such file found\n");
+        return 0;
+    }
+    fread(token, strlen(token), 1, fptr);
+    return token;
 }

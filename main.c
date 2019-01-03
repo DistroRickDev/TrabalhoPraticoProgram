@@ -18,10 +18,8 @@ int main()
     reg = readReg(&reg);
     readAdm();
     listAdm();
-    userSetup(&reg);
-    /*token[21] = tokenGenerator(token);
-    printf("%s\n", token);*/
-    //
+    //userSetup(&reg);
+    return 0;
 }
 
 
