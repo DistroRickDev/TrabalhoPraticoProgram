@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Login_w_struct.dir/main.c.obj"
-  "CMakeFiles/Login_w_struct.dir/admin_setup.c.obj"
+  "CMakeFiles/Login_w_struct.dir/main.c.o"
+  "CMakeFiles/Login_w_struct.dir/admin_setup.c.o"
   "Login_w_struct.pdb"
-  "Login_w_struct.exe"
-  "Login_w_struct.exe.manifest"
-  "libLogin_w_struct.dll.a"
+  "Login_w_struct"
 )
 
 # Per-language clean rules from dependency scanning.
