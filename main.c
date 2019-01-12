@@ -13,7 +13,6 @@
 
 int main()
 {
-    char token[21] = "";
     int reg = 0;
     reg = readReg(&reg);
     readAdm();

@@ -3,7 +3,7 @@
 #define LOGIN_W_STRUCT_ADMIN_SETUP_H
 
 char tokenGenerator(char token[]);
-void userSetup(int *reg);
+void adminSetup(int *reg);
 void checkAdmin(int *reg);
 void listAdm();
 void admWrite();

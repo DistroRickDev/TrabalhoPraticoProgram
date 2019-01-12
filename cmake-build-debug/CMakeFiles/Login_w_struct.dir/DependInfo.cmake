@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/rickphill/Documents/TrabalhoPraticoProgram/admin_setup.c" "/home/rickphill/Documents/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_setup.c.o"
-  "/home/rickphill/Documents/TrabalhoPraticoProgram/main.c" "/home/rickphill/Documents/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.o"
+  "/home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram/admin_setup.c" "/home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_setup.c.o"
+  "/home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram/main.c" "/home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

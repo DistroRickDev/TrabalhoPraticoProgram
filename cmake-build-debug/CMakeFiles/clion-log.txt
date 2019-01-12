@@ -1,11 +1,4 @@
-/opt/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rickphill/Documents/TrabalhoPraticoProgram
--- The C compiler identification is GNU 8.2.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
+/opt/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/rickphill/Documents/TrabalhoPraticoProgram/cmake-build-debug
+-- Build files have been written to: /home/rickphill/Documents/Programming_C/TrabalhoPraticoProgram/cmake-build-debug

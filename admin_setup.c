@@ -12,7 +12,7 @@ typedef struct{
 
 admin * adm_header = NULL;
 
-void userSetup(int *reg) {
+void adminSetup(int *reg) {
     if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
         //char token[21] = "";
@@ -128,7 +128,7 @@ int readReg(int *reg)
     if(fptr == NULL){
         printf("No such file found\n");
         *reg = 0;
-        return *reg;
+        adminSetup(reg);
     }
     fread(reg, sizeof(reg), 1, fptr);
     return *reg;
