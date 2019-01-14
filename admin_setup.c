@@ -12,11 +12,11 @@ typedef struct{
 
 admin * adm_header = NULL;
 
-void userSetup(int *reg) {
+void adminSetup(int *reg) {
     if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
-        char token[21] = "";
-        token[21] = tokenGenerator(token);
+        //char token[21] = "";
+        //token[21] = tokenGenerator(token);
         printf("There is no user set up yet\n");
         printf("Register your user name (max. of 20 chars.):\n");
         scanf("%s", new_Adm->user);
@@ -27,8 +27,8 @@ void userSetup(int *reg) {
         admWrite();
         *reg = 1;
         writeReg(reg);
-        printf("You have 30 seconds take not of your token in case you wan't to restart your password\n");
-        printf("REFTOKEN: %s\n", token);
+        //printf("You have 30 seconds take not of your token in case you wan't to restart your password\n");
+        //printf("REFTOKEN: %s\n", token);
         (long)time(30);//it will wait 30 seconds
         system("cls");
     }
@@ -129,13 +129,13 @@ int readReg(int *reg)
     if(fptr == NULL){
         printf("No such file found\n");
         *reg = 0;
-        return *reg;
+        adminSetup(reg);
     }
     fread(reg, sizeof(reg), 1, fptr);
     return *reg;
 }
 
-
+/*
 char tokenGenerator(char token[])
 {
     srand(time(0));
@@ -165,6 +165,7 @@ char tokenGenerator(char token[])
     return *token;
 }
 
+
 char *writeToken(char token[])
 {
     FILE *fptr;
@@ -188,3 +189,4 @@ char *readToken(char token[])
     fread(token, strlen(token), 1, fptr);
     return token;
 }
+ */

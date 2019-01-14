@@ -122,33 +122,6 @@ Login_w_struct/fast:
 	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/build
 .PHONY : Login_w_struct/fast
 
-admin_menu.obj: admin_menu.c.obj
-
-.PHONY : admin_menu.obj
-
-# target to build an object file
-admin_menu.c.obj:
-	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.obj
-.PHONY : admin_menu.c.obj
-
-admin_menu.i: admin_menu.c.i
-
-.PHONY : admin_menu.i
-
-# target to preprocess a source file
-admin_menu.c.i:
-	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.i
-.PHONY : admin_menu.c.i
-
-admin_menu.s: admin_menu.c.s
-
-.PHONY : admin_menu.s
-
-# target to generate assembly for a file
-admin_menu.c.s:
-	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.s
-.PHONY : admin_menu.c.s
-
 admin_setup.obj: admin_setup.c.obj
 
 .PHONY : admin_setup.obj
@@ -212,9 +185,6 @@ help:
 	@echo ... edit_cache
 	@echo ... Login_w_struct
 	@echo ... rebuild_cache
-	@echo ... admin_menu.obj
-	@echo ... admin_menu.i
-	@echo ... admin_menu.s
 	@echo ... admin_setup.obj
 	@echo ... admin_setup.i
 	@echo ... admin_setup.s

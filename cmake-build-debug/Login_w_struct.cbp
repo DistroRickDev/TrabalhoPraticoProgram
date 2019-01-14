@@ -76,12 +76,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.c">
-			<Option target="Login_w_struct"/>
-		</Unit>
-		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h">
-			<Option target="Login_w_struct"/>
-		</Unit>
 		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
