@@ -10,15 +10,16 @@
 #include <stdlib.h>
 #include <time.h>
 #include "admin_setup.h"
-
+#include "admin_menu.h"
 int main()
 {
-    char token[21] = "";
     int reg = 0;
+    adminMenu(&reg);
     reg = readReg(&reg);
     readAdm();
     listAdm();
     //userSetup(&reg);
+
     return 0;
 }
 

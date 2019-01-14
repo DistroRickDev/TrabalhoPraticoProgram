@@ -115,6 +115,7 @@ int writeReg(int *reg)
     fptr = fopen("reg.bin", "wb");
     if(fptr == NULL){
         printf("No such file found\n");
+        *reg = 0;
         return *reg;
     }
     fwrite(reg, sizeof(reg), 1, fptr);
