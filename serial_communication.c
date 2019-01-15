@@ -84,7 +84,7 @@ int serialRead(){
     }
     else //If  WaitCommEvent()==True Read the RXed data using ReadFile();
     {
-        printf("\n\n    Characters Received \t");
+        printf("\n\n    Characters Received \n");
         do
         {
             //Read_Status = ReadFile(hComm, &TempChar, sizeof(TempChar), &NoBytesRead, NULL);
