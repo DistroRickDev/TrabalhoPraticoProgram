@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.c">
+			<Option target="Login_w_struct"/>
+		</Unit>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h">
+			<Option target="Login_w_struct"/>
+		</Unit>
 		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
@@ -83,6 +89,12 @@
 			<Option target="Login_w_struct"/>
 		</Unit>
 		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c">
+			<Option target="Login_w_struct"/>
+		</Unit>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.c">
+			<Option target="Login_w_struct"/>
+		</Unit>
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
 		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/CMakeLists.txt">

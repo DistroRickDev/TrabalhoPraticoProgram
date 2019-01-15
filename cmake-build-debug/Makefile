@@ -122,6 +122,33 @@ Login_w_struct/fast:
 	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/build
 .PHONY : Login_w_struct/fast
 
+admin_menu.obj: admin_menu.c.obj
+
+.PHONY : admin_menu.obj
+
+# target to build an object file
+admin_menu.c.obj:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.obj
+.PHONY : admin_menu.c.obj
+
+admin_menu.i: admin_menu.c.i
+
+.PHONY : admin_menu.i
+
+# target to preprocess a source file
+admin_menu.c.i:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.i
+.PHONY : admin_menu.c.i
+
+admin_menu.s: admin_menu.c.s
+
+.PHONY : admin_menu.s
+
+# target to generate assembly for a file
+admin_menu.c.s:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/admin_menu.c.s
+.PHONY : admin_menu.c.s
+
 admin_setup.obj: admin_setup.c.obj
 
 .PHONY : admin_setup.obj
@@ -176,6 +203,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/main.c.s
 .PHONY : main.c.s
 
+serial_communication.obj: serial_communication.c.obj
+
+.PHONY : serial_communication.obj
+
+# target to build an object file
+serial_communication.c.obj:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/serial_communication.c.obj
+.PHONY : serial_communication.c.obj
+
+serial_communication.i: serial_communication.c.i
+
+.PHONY : serial_communication.i
+
+# target to preprocess a source file
+serial_communication.c.i:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/serial_communication.c.i
+.PHONY : serial_communication.c.i
+
+serial_communication.s: serial_communication.c.s
+
+.PHONY : serial_communication.s
+
+# target to generate assembly for a file
+serial_communication.c.s:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/serial_communication.c.s
+.PHONY : serial_communication.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +239,18 @@ help:
 	@echo ... edit_cache
 	@echo ... Login_w_struct
 	@echo ... rebuild_cache
+	@echo ... admin_menu.obj
+	@echo ... admin_menu.i
+	@echo ... admin_menu.s
 	@echo ... admin_setup.obj
 	@echo ... admin_setup.i
 	@echo ... admin_setup.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... serial_communication.obj
+	@echo ... serial_communication.i
+	@echo ... serial_communication.s
 .PHONY : help
 
 
