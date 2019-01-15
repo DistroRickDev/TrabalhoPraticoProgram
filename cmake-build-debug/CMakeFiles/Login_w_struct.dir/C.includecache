@@ -6,27 +6,13 @@
 
 #IncludeRegexTransform: 
 
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h
-
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
-
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgram/db_interaction.c
 stdio.h
 -
-serial_communication.h
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h
-admin_setup.h
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
-admin_menu.h
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h
+sqlite3.h
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgram/sqlite3.h
 
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.c
-stdio.h
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgram/sqlite3.h
+stdarg.h
 -
-windows.h
--
-time.h
--
-
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h
 

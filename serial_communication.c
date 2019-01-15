@@ -25,9 +25,10 @@ int serialRead(){
     COMMTIMEOUTS timeouts = {0};
 
     // Open the highest available serial port number
+    char portaserie[11] = "\\\\.\\COM5";
     fprintf(stderr, "Opening serial port...");
     hSerial = CreateFile(
-            "\\\\.\\COM4", GENERIC_READ|GENERIC_WRITE, 0, NULL,
+            portaserie, GENERIC_READ|GENERIC_WRITE, 0, NULL,
             OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL );
     if (hSerial == INVALID_HANDLE_VALUE)
     {
