@@ -12,6 +12,7 @@
 
 int main()
 {
+    //(void)system("C:\\Windows\\system32\\notepad.exe");
     serialRead();
     /*int reg = 0;
     adminMenu(&reg);

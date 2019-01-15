@@ -6,17 +6,27 @@
 
 #IncludeRegexTransform: 
 
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h
+
 E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
 
 E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c
 stdio.h
 -
-string.h
+serial_communication.h
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h
+admin_setup.h
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
+admin_menu.h
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h
+
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.c
+stdio.h
 -
-stdlib.h
+windows.h
 -
 time.h
 -
-admin_setup.h
-E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h
+
+E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h
 
