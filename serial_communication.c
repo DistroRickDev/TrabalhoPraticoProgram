@@ -4,28 +4,19 @@
 #define    BUFFERLENGTH 256
 
 int serialRead(){
-    char dateStr[9];
-    char timeStr[9];
-
-
-    /*printf("Hello, World!\n");
-// pega a data atual
-    _strdate( dateStr);
-    printf( "Dia %s \n", dateStr);
-
-    // pega a hora atual
-    _strtime( timeStr );
-    printf( "Hora %s \n", timeStr);
-
-    */
 
     // Declare variables and structures
     HANDLE hSerial;
     DCB dcbSerialParams = {0};
     COMMTIMEOUTS timeouts = {0};
+    int valid = 0,count = 0;
+
 
     // Open the highest available serial port number
-    char portaserie[11] = "\\\\.\\COM5";
+    while(valid == 0) {
+    char portaserie[15]= "\\\\.\\COM0";
+        portaserie[strlen(portaserie)-1] += count;
+    printf("%s\n",portaserie);
     fprintf(stderr, "Opening serial port...");
     hSerial = CreateFile(
             portaserie, GENERIC_READ|GENERIC_WRITE, 0, NULL,
@@ -33,9 +24,16 @@ int serialRead(){
     if (hSerial == INVALID_HANDLE_VALUE)
     {
         fprintf(stderr, "Error\n");
-        return 1;
+
     }
-    else fprintf(stderr, "OK\n");
+    else {
+        fprintf(stderr, "OK\n");
+        valid = 1;
+    }
+
+    count++;
+
+    }
 
     // Set device parameters (38400 baud, 1 start bit,
     // 1 stop bit, no parity)

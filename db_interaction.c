@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "sqlite3.h"
 
-/*
+
 int create_db (void){
     sqlite3 *logDB;
     sqlite3_stmt *res;
@@ -36,4 +36,3 @@ int create_db (void){
         printf("%s\n",sqlite3_column_text(res,0));
     }
 }
-*/
