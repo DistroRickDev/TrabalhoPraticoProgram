@@ -151,11 +151,11 @@ void admReset(int *reg){
             }
             ptr = ptr->next;
         }
-        printf("Adminstrator cleared\n");
     }
     admWrite();
-    *reg = 0;
+    reg = 0;
     writeReg(reg);
+    printf("Adminstrator cleared\n");
 }
 
 void writeToken(char id[]){
@@ -171,7 +171,7 @@ void writeToken(char id[]){
 
 char *readToken(char id[]){
     FILE *fptr;
-    fptr = fopen("id.bin", "rb");
+    fptr = fopen("id.txt", "r");
     if(fptr == NULL){
         printf("No such file found\n");
     }

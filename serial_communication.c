@@ -72,21 +72,23 @@ int  serialRead(){
     BOOL Read_Status;                      // Status of the various operations
     char *SerialBuffer[BUFFERLENGTH];      // Buffer Containing Rxed Data
     DWORD NoBytesRead;                    // Bytes read by ReadFile()
-
+    int pos = 0;
     int i = 0;
     if (Read_Status == FALSE) {
         printf("\n    Error! in Setting WaitCommEvent()");
     } else //If  WaitCommEvent()==True Read the RXed data using ReadFile();
     {
-        printf("\n\n    Characters Received \n");
+        printf("\n\n   Keep the key in front of the sensor until the door close \n");
         do {
             //Read_Status = ReadFile(hComm, &TempChar, sizeof(TempChar), &NoBytesRead, NULL);
             if (!ReadFile(hSerial, SerialBuffer, BUFFERLENGTH - 1, &NoBytesRead, NULL)) {
                 printf("wrong character");
             }
             //SerialBuffer[i] = TempChar;
-            printf("%s", SerialBuffer);
-            writeToken(SerialBuffer);
+            char *id = (char*)SerialBuffer;
+
+            printf("%s", id);
+            writeToken(id);
             i++;
         } while (i == 0);
 
