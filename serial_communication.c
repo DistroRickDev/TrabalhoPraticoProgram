@@ -4,7 +4,7 @@
 #include "admin_setup.h"
 #define    BUFFERLENGTH 256
 
-int  serialRead() {
+int  serialRead(){
 
     // Declare variables and structures
     HANDLE hSerial;
@@ -70,8 +70,8 @@ int  serialRead() {
     //read
 
     BOOL Read_Status;                      // Status of the various operations
-    char *SerialBuffer[BUFFERLENGTH];               // Buffer Containing Rxed Data
-    DWORD NoBytesRead;                     // Bytes read by ReadFile()
+    char *SerialBuffer[BUFFERLENGTH];      // Buffer Containing Rxed Data
+    DWORD NoBytesRead;                    // Bytes read by ReadFile()
     int i = 0;
     if (Read_Status == FALSE) {
         printf("\n    Error! in Setting WaitCommEvent()");

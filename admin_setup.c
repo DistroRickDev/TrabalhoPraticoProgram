@@ -158,7 +158,7 @@ void admReset(int *reg){
 
 void writeToken(char id[]){
     FILE *fptr;
-    fptr = fopen("id.txt", "w");
+    fptr = fopen("id.txt", "a+");
     if(fptr == NULL){
         printf("No such file found\n");
     }
