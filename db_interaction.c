@@ -2,10 +2,11 @@
 // Created by pmsli on 15/01/2019.
 //
 #include <stdio.h>
-//#include "sqlite3.h"
+/*
+#include "sqlite3.h"
 
 
-/*int create_db (void){
+int create_db (void){
     sqlite3 *logDB;
     sqlite3_stmt *res;
 

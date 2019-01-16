@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include "serial_communication.h"
 #include "admin_setup.h"
 
 typedef struct{
@@ -13,10 +14,9 @@ typedef struct{
 admin * adm_header = NULL;
 
 void adminSetup(int *reg) {
+    char ch;
     if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
-        //char token[21] = "";
-        //token[21] = tokenGenerator(token);
         printf("There is no user set up yet\n");
         printf("Register your user name (max. of 20 chars.):\n");
         scanf("%s", new_Adm->user);
@@ -27,9 +27,6 @@ void adminSetup(int *reg) {
         admWrite();
         *reg = 1;
         writeReg(reg);
-        //printf("You have 30 seconds take not of your token in case you wan't to restart your password\n");
-        //printf("REFTOKEN: %s\n", token);
-        (long)time(30);//it will wait 30 seconds
         system("cls");
     }
     else{
@@ -46,6 +43,7 @@ void checkAdmin(int *reg) {
     scanf("%s", adm);
     printf("Password:\n");
     scanf("%s", psswd);
+
     while (*reg != 2) {
         if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
             printf("Acess Granted\n");
@@ -135,58 +133,46 @@ int readReg(int *reg)
     return *reg;
 }
 
-/*
-char tokenGenerator(char token[])
-{
-    srand(time(0));
-    int index = 0;
-    while (index < 20)
-    {
-        int limit = rand()%122;
-            if(limit >=48 && limit<=57)
-            {
-                token[index] = (char)limit;
-                index++;
+void admReset(int *reg){
+    admin *ptr = adm_header;
+    admin *aux = adm_header;
+    char *resetToken = "DA:59:CD:73";
+    char *token;
+    if (strcmp(resetToken, token) == 0){
+        while (ptr != NULL){
+            if(ptr == adm_header){
+                aux = ptr->next; // guardo posição do next do ptr
+                free(ptr); //
+                ptr->next=adm_header;
+                adm_header = aux;
+                ptr = adm_header;
             }
-            else if(limit >=65 && limit<=90)
-            {
-                token[index] = (char)limit;
-                index++;
-            }
-            else if(limit >=97 && limit<=122)
-            {
-                token[index] = (char)limit;
-                index++;
-            }
-            else{
-            continue;
-            }
+            ptr = ptr->next;
+        }
+        printf("Adminstrator reseted sucessfully\n");
     }
-    return *token;
+    admWrite();
+    reg = 0;
+    writeReg(reg);
 }
 
-
-char *writeToken(char token[])
-{
+void writeToken(char id[]){
     FILE *fptr;
-    fptr = fopen("token.bin", "wb");
+    fptr = fopen("id.txt", "w");
     if(fptr == NULL){
         printf("No such file found\n");
-        return(NULL);
     }
-    fwrite(token, strlen(token), 1, fptr);
-    return token;
+    fprintf(fptr, "%s", id);
+    fclose(fptr);
 }
 
-char *readToken(char token[])
-{
+char readToken(char *id){
     FILE *fptr;
-    fptr = fopen("token.bin", "rb");
+    fptr = fopen("id.txt", "r");
     if(fptr == NULL){
         printf("No such file found\n");
-        return 0;
     }
-    fread(token, strlen(token), 1, fptr);
-    return token;
+    fscanf(fptr,"%s",id);
+    fclose(fptr);
+    return *id;
 }
- */

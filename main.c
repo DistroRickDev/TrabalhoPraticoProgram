@@ -12,14 +12,16 @@
 
 int main()
 {
-    //(void)system("C:\\Windows\\system32\\notepad.exe");
-    serialRead();
-    /*int reg = 0;
-    adminMenu(&reg);
-    reg = readReg(&reg);
+
     readAdm();
-    listAdm();*/
-    //userSetup(&reg);
+    int reg = 0;
+    reg = readReg(&reg);
+    //adminMenu(&reg);
+    //checkAdmin(&reg);
+    listAdm();
+    serialRead();
+    //admReset(&reg);
+
 
     return 0;
 }
