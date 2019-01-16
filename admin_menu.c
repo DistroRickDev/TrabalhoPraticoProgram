@@ -21,7 +21,9 @@ void adminMenu(int *reg) {
             }
         }
     }
-    else{
+    else if(*reg == 1){
+        checkAdmin(reg);
+    } else{
         adminSetup(reg);
     }
 }

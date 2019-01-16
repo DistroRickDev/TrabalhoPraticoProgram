@@ -134,10 +134,12 @@ int readReg(int *reg)
 }
 
 void admReset(int *reg){
+    serialRead();
     admin *ptr = adm_header;
     admin *aux = adm_header;
     char *resetToken = "DA:59:CD:73";
-    char *token;
+    char *token = " ";
+    token = readToken(token);
     if (strcmp(resetToken, token) == 0){
         while (ptr != NULL){
             if(ptr == adm_header){
@@ -149,30 +151,31 @@ void admReset(int *reg){
             }
             ptr = ptr->next;
         }
-        printf("Adminstrator reseted sucessfully\n");
+        printf("Adminstrator cleared\n");
     }
     admWrite();
-    reg = 0;
+    *reg = 0;
     writeReg(reg);
 }
 
 void writeToken(char id[]){
     FILE *fptr;
-    fptr = fopen("id.txt", "a+");
+    fptr = fopen("id.txt", "w");
     if(fptr == NULL){
         printf("No such file found\n");
     }
+
     fprintf(fptr, "%s", id);
     fclose(fptr);
 }
 
-char readToken(char *id){
+char *readToken(char id[]){
     FILE *fptr;
-    fptr = fopen("id.txt", "r");
+    fptr = fopen("id.bin", "rb");
     if(fptr == NULL){
         printf("No such file found\n");
     }
-    fscanf(fptr,"%s",id);
+    fscanf(fptr, "%s", id);
     fclose(fptr);
-    return *id;
+    return id;
 }

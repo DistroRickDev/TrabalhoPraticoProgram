@@ -72,6 +72,7 @@ int  serialRead(){
     BOOL Read_Status;                      // Status of the various operations
     char *SerialBuffer[BUFFERLENGTH];      // Buffer Containing Rxed Data
     DWORD NoBytesRead;                    // Bytes read by ReadFile()
+
     int i = 0;
     if (Read_Status == FALSE) {
         printf("\n    Error! in Setting WaitCommEvent()");
