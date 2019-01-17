@@ -52,7 +52,7 @@ void checkAdmin(int *reg) {
     printf("Password:\n");
     scanf("%s", psswd);
 
-    while (*reg != 2) {
+    while (*reg == 1) {
         if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);

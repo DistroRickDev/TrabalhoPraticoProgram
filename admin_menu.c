@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "admin_setup.h"
 
 void initialScreen(){
@@ -15,12 +16,52 @@ void initialScreen(){
 
 void initialMenu(int *reg)
 {
+    fflush(stdin);
     printf("******************************\n");
     printf("**** Log In/Sign Up Menu: ****\n");
     printf("******************************\n");
     printf("1- Register Admin:\n");
     printf("2- Log in as Admin\n");
+    printf("3- Log in as worker\n");
+    printf("4- Reset Admin:\n");
+    printf("5- Exit to desktop\n");
+    char opc;
+    scanf("%c", &opc);
+    switch (opc){
+        default:{
+            printf("Please select a valid a option");
+            system("cls");
+            initialScreen();
+            initialMenu(reg);
+        }
+        case '1':{
+            system("cls");
+            initialScreen();
+            adminSetup(reg);
+        }
+        case '2':{
+            system("cls");
+            initialScreen();
+            checkAdmin(reg);
+        }
+        case '3':{
+            system("cls");
+            initialScreen();
+        }
+        case '4':{
+            system("cls");
+            initialScreen();
+            admReset(reg);
+        }
 
+        case '5':{
+            system("cls");
+            initialScreen();
+            printf("Exiting .\n");
+            initialScreen();
+            exit(0);
+        }
+    }
 }
 
 void adminMenu(int *reg) {
