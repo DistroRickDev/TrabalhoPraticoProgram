@@ -9,16 +9,17 @@
 #include "serial_communication.h"
 #include "admin_setup.h"
 #include "admin_menu.h"
+#include "db_interaction.h"
 
 int main()
 {
-
-    readAdm();
-    int reg = 0;
-    reg = readReg(&reg);
-    adminMenu(&reg);
+    create_db();
+    //readAdm();
+    //int reg = 0;
+    //reg = readReg(&reg);
+    //adminMenu(&reg);
     //checkAdmin(&reg);
-    listAdm();
+    //listAdm();
     //serialRead();
     //admReset(&reg);
     //listAdm();

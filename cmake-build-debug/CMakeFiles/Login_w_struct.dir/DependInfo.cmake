@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.c" "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_menu.c.obj"
-  "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c" "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_setup.c.obj"
-  "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/db_interaction.c" "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/db_interaction.c.obj"
-  "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c" "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.obj"
-  "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.c" "E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir/serial_communication.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/admin_menu.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_menu.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/admin_setup.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/admin_setup.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/db_interaction.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/db_interaction.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/main.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/serial_communication.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/serial_communication.c.obj"
+  "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/sqlite3.c" "C:/Users/Utilizador/CLionProjects/TrabalhoPraticoPrograms/cmake-build-debug/CMakeFiles/Login_w_struct.dir/sqlite3.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
