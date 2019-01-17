@@ -20,7 +20,9 @@ int main()
     int reg = 0;
     reg = readReg(&reg);
     initialMenu(&reg);
+    printf("teste\n");
     //listAdm();
+
     /*
     char *timestamp;
     checkForDB();
