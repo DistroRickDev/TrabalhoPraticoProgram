@@ -58,6 +58,7 @@ void checkAdmin(int *reg) {
     while (*reg == 1) {
         if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
             printf("Acess Granted\n");
+            system("cls");
             printf("Welcome back %s\n", adm_header->user);
             *reg = 2;
             adminMenu(reg);

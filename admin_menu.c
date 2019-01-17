@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "admin_setup.h"
+#include <time.h>
 
 void initialScreen(){
     printf( " _    ____________   _                   _____           _\n");
@@ -70,6 +71,7 @@ void initialMenu(int *reg)
 }
 
 void adminMenu(int *reg) {
+    initialScreen();
     char opc = ' ';
     if (*reg == 2) {
         printf("******************************\n");
@@ -95,6 +97,7 @@ void adminMenu(int *reg) {
                 initialScreen();
                 printf("Logging you out...\n");
                 printf("Exiting ...\n");
+                time(1000);
                 initialScreen();
                 exit(0);
             }
