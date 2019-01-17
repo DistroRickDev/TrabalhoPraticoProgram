@@ -21,7 +21,7 @@ int main()
     //listAdm();
     //serialRead();
     //admReset(&reg);
-    //listAdm();
+    listAdm();
 
 
     return 0;

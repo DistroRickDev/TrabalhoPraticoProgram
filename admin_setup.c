@@ -146,29 +146,33 @@ int readReg(int *reg)
     return *reg;
 }
 
-void admReset(int *reg){
+void admReset(int *reg) {
     serialRead();
     admin *ptr = adm_header;
     admin *aux = adm_header;
     int var;
     var = readToken();
     if (var == 0) {
-
-        while (ptr != NULL) {
-            if (ptr == adm_header) {
-                aux = ptr->next; // guardo posição do next do ptr
-                free(ptr); //
-                ptr->next = adm_header;
-                adm_header = aux;
-                ptr = adm_header;
+        /*if (ptr != NULL) {
+            while (ptr != NULL) {
+                if (ptr == adm_header) {
+                    aux = ptr->next; // guardo posição do next do ptr
+                    free(ptr); //
+                    ptr->next = adm_header;
+                    adm_header = aux;
+                    ptr = adm_header;
+                }
+                ptr = ptr->next;
             }
-            ptr = ptr->next;
-        }
+        }*/
+
         remove("admin.bin");
         remove("reg.bin");
+        remove("id.txt");
         *reg = 0;
         writeReg(reg);
         printf("Adminstrator cleared\n");
+        printf("%d", var);
     }
 }
 
