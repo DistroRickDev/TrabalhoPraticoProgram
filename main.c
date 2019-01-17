@@ -14,6 +14,7 @@
 
 int main()
 {
+    //testaru
     readAdm();
     initialScreen();
     int reg = 0;
