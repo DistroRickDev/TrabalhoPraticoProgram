@@ -14,14 +14,21 @@ typedef struct{
 admin * adm_header = NULL;
 
 void adminSetup(int *reg) {
-    char ch;
     if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
         printf("There is no user set up yet\n");
         printf("Register your user name (max. of 20 chars.):\n");
         scanf("%s", new_Adm->user);
+        if(strlen(new_Adm->user) > 20){
+            printf("Username must be maximum of 20 chars\n");
+            adminSetup(reg);
+        }
         printf("Register your password (max. of 20 chars.):\n");
         scanf("%s", new_Adm->password);
+        if(strlen(new_Adm->password) > 20){
+            printf("Password must be maximum of 20 chars\n");
+            adminSetup(reg);
+        }
         new_Adm->next = adm_header;
         adm_header = new_Adm;
         admWrite();
@@ -117,7 +124,13 @@ int writeReg(int *reg)
         return *reg;
     }
     fwrite(reg, sizeof(reg), 1, fptr);
-    return *reg;
+    if (*reg == 1) {
+        return *reg;
+    }
+    else{
+        *reg = 0;
+        return *reg;
+    }
 }
 
 int readReg(int *reg)
@@ -137,39 +150,41 @@ void admReset(int *reg){
     serialRead();
     admin *ptr = adm_header;
     admin *aux = adm_header;
-    char *resetToken = "DA:59:CD:73";
-    char *token = " ";
-    token = readToken(token);
-    if (strcmp(resetToken, token) == 0){
-        while (ptr != NULL){
-            if(ptr == adm_header){
+    int var;
+    var = readToken();
+    if (var == 0) {
+
+        while (ptr != NULL) {
+            if (ptr == adm_header) {
                 aux = ptr->next; // guardo posição do next do ptr
                 free(ptr); //
-                ptr->next=adm_header;
+                ptr->next = adm_header;
                 adm_header = aux;
                 ptr = adm_header;
             }
             ptr = ptr->next;
         }
+        remove("admin.bin");
+        remove("reg.bin");
+        *reg = 0;
+        writeReg(reg);
+        printf("Adminstrator cleared\n");
     }
-    admWrite();
-    reg = 0;
-    writeReg(reg);
-    printf("Adminstrator cleared\n");
 }
 
-void writeToken(char id[]){
+
+void writeToken(char id[]) {
     FILE *fptr;
     fptr = fopen("id.txt", "w");
-    if(fptr == NULL){
+    if (fptr == NULL) {
         printf("No such file found\n");
     }
-
     fprintf(fptr, "%s", id);
     fclose(fptr);
 }
 
-char *readToken(char id[]){
+/*
+ char *readToken(char id[]){
     FILE *fptr;
     fptr = fopen("id.txt", "r");
     if(fptr == NULL){
@@ -178,4 +193,21 @@ char *readToken(char id[]){
     fscanf(fptr, "%s", id);
     fclose(fptr);
     return id;
+}
+ */
+
+int readToken(){
+    char resetToken[] = "DA:59:CD:73";
+    char id[strlen(resetToken)];
+    int token = 0;
+    FILE *fptr;
+    fptr = fopen("id.txt", "r");
+    if(fptr == NULL){
+        printf("No such file found\n");
+    }
+    fscanf(fptr, "%s", id);
+    token = strcmp(resetToken, id);
+    printf("%d\n FILE: %s\n RESETTOKEN:: %s\n", token, id, resetToken);
+    fclose(fptr);
+    return token;
 }

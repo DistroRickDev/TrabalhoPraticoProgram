@@ -4,7 +4,8 @@
 #include "admin_setup.h"
 #define    BUFFERLENGTH 256
 
-int  serialRead(){
+int serialRead(){
+    char *id = " ";
 
     // Declare variables and structures
     HANDLE hSerial;
@@ -85,8 +86,7 @@ int  serialRead(){
                 printf("wrong character");
             }
             //SerialBuffer[i] = TempChar;
-            char *id = (char*)SerialBuffer;
-
+            id = (char*)SerialBuffer;
             printf("%s", id);
             writeToken(id);
             i++;
@@ -103,4 +103,5 @@ int  serialRead(){
         return 1;
     }
     fprintf(stderr, "OK\n");
+
 }
