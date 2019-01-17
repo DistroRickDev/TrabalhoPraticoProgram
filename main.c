@@ -13,12 +13,12 @@
 
 int main()
 {
-    //create_db();
+    checkForDB();
+    insertWorker("Adolf Hitler","911911911","roast",911);
 
-    readAdm();
-    int reg = 0;
-    reg = readReg(&reg);
-    adminMenu(&reg);
+    //int reg = 0;
+    //reg = readReg(&reg);
+    //adminMenu(&reg);
     //checkAdmin(&reg);
     //listAdm();
     //serialRead();

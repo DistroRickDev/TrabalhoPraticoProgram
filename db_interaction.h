@@ -4,5 +4,6 @@
 
 #ifndef LOGIN_W_STRUCT_DB_INTERACTION_H
 #define LOGIN_W_STRUCT_DB_INTERACTION_H
-int create_db (void);
+void  checkForDB(void);
+void insertWorker(char *name, char *rfid, char *password, float salary);
 #endif //LOGIN_W_STRUCT_DB_INTERACTION_H

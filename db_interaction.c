@@ -2,37 +2,107 @@
 // Created by pmsli on 15/01/2019.
 //
 #include <stdio.h>
+#include <unistd.h>
 #include "sqlite3.h"
 
+static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
+    int i;
+    for(i = 0; i<argc; i++) {
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    }
+    printf("\n");
+    return 0;
+}
 
-int create_db (void){
-    sqlite3 *logDB;
-    sqlite3_stmt *res;
+void dbCreation() {
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char *sql;
 
-    char  *err_msg = 0;
 
-    int rc = sqlite3_open(":memory:", &logDB);
 
-    if (rc != SQLITE_OK) {
+    rc = sqlite3_open("checkpointDATA.db", &db);
 
-        fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(logDB));
-        sqlite3_close(logDB);
-
-        return 1;
+    if (rc) {
+        fprintf(stderr, "Can't Create database due to: %s\n", sqlite3_errmsg(db));
+    } else {
+        fprintf(stderr, "Created database successfully\n");
     }
 
-    rc = sqlite3_prepare_v2(logDB, "SELECT SQLITE_VERSION()", -1, &res, 0);
+    /* Create SQL table Workers */
+    sql = "CREATE TABLE WORKERS("  \
+      "ID INTEGER PRIMARY KEY     AUTOINCREMENT," \
+      "NAME           TEXT    NOT NULL," \
+      "RFID           TEXT    NOT NULL," \
+      "PASSWORD       TEXT    NOT NULL," \
+      "SALARY         REAL    NOT NULL);";
 
-    if(rc != SQLITE_OK){
-        fprintf(stderr, "Failed to fetch data: %s\n", sqlite3_errmsg(logDB));
-        sqlite3_close(logDB);
+    /* Execute SQL statement */
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
 
-        return 1;
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error creating Workers: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Table workers created successfully\n");
     }
 
-    rc = sqlite3_step(res);
+    /* Create SQL table LOGS */
+    sql = "CREATE TABLE LOGS("  \
+      "ID INTEGER PRIMARY KEY," \
+      "RFID           TEXT    NOT NULL," \
+      "TIME           INT     NOT NULL," \
+      "TYPE           INT     NOT NULL);";
 
-    if(rc == SQLITE_ROW){
-        printf("%s\n",sqlite3_column_text(res,0));
+    /* Execute SQL statement */
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error creating LOGS: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Table LOGS created successfully\n");
     }
+
+
+    sqlite3_close(db);
+}
+
+void checkForDB() {
+
+    if( access( "checkpointDATA.db" , F_OK ) != -1 ) {
+        fprintf(stderr, "Loaded database successfully\n");
+    } else {
+        fprintf(stderr,"Can't find database creating from scratch\n");
+        dbCreation();
+    }
+}
+
+void insertWorker(char *name, char *rfid, char *password, float salary) {
+
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char sql[5000];
+
+    rc = sqlite3_open("checkpointDATA.db", &db);
+
+    if( rc ) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+    } else {
+        fprintf(stderr, "Opened database successfully\n");
+    }
+
+    snprintf( sql, sizeof(sql), "INSERT INTO WORKERS VALUES (NULL, '%s', '%s', '%s', '%s' );",name, rfid, password, salary);
+
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Records created successfully\n");
+    }
+    sqlite3_close(db);
 }
