@@ -14,9 +14,12 @@
 
 int main()
 {
+    char *timestamp;
     checkForDB();
     insertWorker("Adolf Hitler","911911911","roast",911);
-    insertLog("selectrfid",fprintf(stdout, "%lu\n", (unsigned long)time(NULL)), 1);
+    snprintf(timestamp, sizeof(timestamp),"%s",time(NULL));
+    insertLog("selectrfid",(long int)time, 1);
+
 
     //int reg = 0;
     //reg = readReg(&reg);
