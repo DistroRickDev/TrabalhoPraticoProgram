@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <unistd.h>
+#include <time.h>
 #include "sqlite3.h"
 
 static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
@@ -79,12 +80,14 @@ void checkForDB() {
     }
 }
 
-void insertLog(char *rfid, int time, int type) {
+void insertLog(char *rfid, int type) {
 
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
     char sql[5000];
+    char times[11];
+    snprintf(times, sizeof(times), "%lu", (unsigned long)time(NULL));
 
     rc = sqlite3_open("checkpointDATA.db", &db);
 
@@ -94,7 +97,7 @@ void insertLog(char *rfid, int time, int type) {
         fprintf(stderr, "Opened database successfully\n");
     }
 
-    snprintf( sql, sizeof(sql), "INSERT INTO LOGS VALUES (NULL, '%s', '%s', '%s' );", rfid, time, type);
+    snprintf( sql, sizeof(sql), "INSERT INTO LOGS VALUES (NULL, '%s', '%d', '%d' );", rfid, times, type);
 
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
 
@@ -122,7 +125,7 @@ void insertWorker(char *name, char *rfid, char *password, float salary) {
         fprintf(stderr, "Opened database successfully\n");
     }
 
-    snprintf( sql, sizeof(sql), "INSERT INTO WORKERS VALUES (NULL, '%s', '%s', '%s', '%s' );",name, rfid, password, salary);
+    snprintf( sql, sizeof(sql), "INSERT INTO WORKERS VALUES (NULL, '%s', '%s', '%s', '%f' );",name, rfid, password, salary);
 
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
 

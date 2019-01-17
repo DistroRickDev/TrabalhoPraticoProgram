@@ -15,8 +15,11 @@
 int main()
 {
     //testaru
+    checkForDB();
+    insertLog("TESTE",1);
     readAdm();
     initialScreen();
+
     int reg = 0;
     reg = readReg(&reg);
     initialMenu(&reg);
