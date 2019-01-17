@@ -18,6 +18,7 @@ int main()
     int reg = 0;
     reg = readReg(&reg);
     initialMenu(&reg);
+    listAdm();
     /*
     char *timestamp;
     checkForDB();
@@ -26,13 +27,6 @@ int main()
     insertLog("selectrfid",(long int)time, 1);
     */
 
-
-    //adminMenu(&reg);
-    //checkAdmin(&reg);
-    //listAdm();
-    //serialRead();
-    //admReset(&reg);
-    //listAdm();
     return 0;
 }
 

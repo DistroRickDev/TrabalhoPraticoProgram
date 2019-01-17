@@ -168,7 +168,7 @@ void admReset(int *reg) {
                 ptr = ptr->next;
             }
         }*/ // nao remover de comentario
-
+        free(adm_header);
         remove("admin.bin");
         remove("reg.bin");
         remove("id.txt");
