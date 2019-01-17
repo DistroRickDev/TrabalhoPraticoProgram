@@ -218,3 +218,14 @@ int readToken(){
     fclose(fptr);
     return token;
 }
+
+char *readRFID(char id[]){
+    FILE *fptr;
+    fptr = fopen("id.txt", "r");
+    if(fptr == NULL){
+        printf("No such file found\n");
+    }
+    fscanf(fptr, "%s", id);
+    fclose(fptr);
+    return *id;
+}

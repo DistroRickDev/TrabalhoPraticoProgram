@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "admin_setup.h"
 #include <time.h>
+#include "db_interaction.h"
+#include "serial_communication.h"
 
 void initialScreen(){
     printf( " _    ____________   _                   _____           _\n");
@@ -89,6 +91,23 @@ void adminMenu(int *reg) {
             default:{
                 printf("Please select a valid option");
                 adminMenu(reg);
+                break;
+            }
+            case '1':{
+                char name[50];
+                char rfid[10];
+                char password[20];
+                float salary;
+                printf("Type in the workers name\n");
+                scanf("%s",name);
+                printf("Pass the workers card in the readerto register the ID\n");
+                serialRead();
+                *rfid= readToken();
+                printf("Type in the workers password (MAX. 20CHAR.)\n");
+                scanf("%s", password);
+                printf("Type in the workers base salary\n");
+                scanf("%f", &salary);
+                insertWorker(name,rfid,password,salary);
                 break;
             }
             case '0':{

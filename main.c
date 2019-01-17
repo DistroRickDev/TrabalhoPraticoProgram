@@ -15,15 +15,14 @@
 int main()
 {
     //testaru
-    checkForDB();
-    insertLog("TESTE",1);
+    //checkForDB();
+    //insertLog("TESTE",1);
     readAdm();
-    initialScreen();
+    //initialScreen();
 
     int reg = 0;
     reg = readReg(&reg);
     initialMenu(&reg);
-    printf("teste\n");
     //listAdm();
 
     /*
