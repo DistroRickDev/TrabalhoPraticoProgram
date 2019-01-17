@@ -15,13 +15,13 @@
 int main()
 {
     //testaru
-    checkForDB();
+
     //insertLog("TESTE",1);
     //initialScreen();
-    //int reg = 0;
-    //reg = readReg(&reg);
-    //initialMenu(&reg);
-    serialRead();
+    int reg = 0;
+    reg = readReg(&reg);
+    initialMenu(&reg);
+
     //listAdm();
 
     /*

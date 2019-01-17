@@ -74,6 +74,7 @@ void initialMenu(int *reg)
 
 void adminMenu(int *reg) {
     initialScreen();
+    checkForDB();
     char opc = ' ';
     if (*reg == 2) {
         printf("******************************\n");
@@ -100,7 +101,7 @@ void adminMenu(int *reg) {
                 float salary;
                 printf("Type in the workers name\n");
                 scanf("%s",name);
-                printf("Pass the workers card in the readerto register the ID\n");
+                printf("Pass the workers card in the reader to register the ID\n");
                 serialRead();
                 readRFID(rfid);
                 printf("Type in the workers password (MAX. 20CHAR.)\n");
@@ -108,6 +109,7 @@ void adminMenu(int *reg) {
                 printf("Type in the workers base salary\n");
                 scanf("%f", &salary);
                 insertWorker(name,rfid,password,salary);
+                adminMenu(reg);
                 break;
             }
             case '0':{
