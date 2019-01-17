@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug"/>
+				<Option working_dir="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug"/>
+				<Option working_dir="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Login_w_struct">
-				<Option output="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Login_w_struct.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug"/>
+				<Option output="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Login_w_struct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -40,15 +40,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 Login_w_struct"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 Login_w_struct"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Login_w_struct/fast">
-				<Option output="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Login_w_struct.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug"/>
+				<Option output="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Login_w_struct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -59,60 +59,60 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 Login_w_struct/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 Login_w_struct/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug"/>
+				<Option working_dir="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/admin_menu.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/admin_menu.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_menu.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/admin_setup.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/admin_setup.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/admin_setup.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/db_interaction.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/db_interaction.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/db_interaction.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/db_interaction.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/main.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/main.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/serial_communication.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/serial_communication.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/serial_communication.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/sqlite3.c">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/sqlite3.c">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/sqlite3.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/sqlite3.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/sqlite3ext.h">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/sqlite3ext.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
-		<Unit filename="C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgra/CMakeLists.txt">
+		<Unit filename="E:/Antigo_Disco/Documentos/C_PROGRAMING/TrabalhoPraticoProgram/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

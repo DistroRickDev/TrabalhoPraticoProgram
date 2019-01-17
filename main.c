@@ -14,15 +14,19 @@
 
 int main()
 {
+    initialScreen();
+    int reg = 0;
+    reg = readReg(&reg);
+    initialMenu(&reg);
+    /*
     char *timestamp;
     checkForDB();
     insertWorker("Adolf Hitler","911911911","roast",911);
     snprintf(timestamp, sizeof(timestamp),"%s",time(NULL));
     insertLog("selectrfid",(long int)time, 1);
+    */
 
 
-    //int reg = 0;
-    //reg = readReg(&reg);
     //adminMenu(&reg);
     //checkAdmin(&reg);
     //listAdm();

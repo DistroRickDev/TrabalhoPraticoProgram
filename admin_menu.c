@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include "admin_setup.h"
 
+void initialScreen(){
+    printf( " _    ____________   _                   _____           _\n");
+    printf( "| |   | ___ \\ ___ \\ | |                 /  ___|         | |\n");
+    printf( "| |   | |_/ / |_/ / | |     ___   __ _  \\ `--. _   _ ___| |_ ___ _ __ ___ \n");
+    printf( "| |   |  __/|    /  | |    / _ \\ / _` |  `--. \\ | | / __| __/ _ \\ '_ ` _ \\\n");
+    printf( "| |___| |   | |\\ \\  | |___| (_) | (_| | /\\__/ / |_| \\__ \\ ||  __/ | | | | |\n");
+    printf( "\\_____|_|   \\_| \\_| \\_____/\\___/ \\__, | \\____/ \\__, |___/\\__\\___|_| |_| |_|\n");
+    printf( "                                  __/ |         __/ |                      \n");
+    printf( "                                 |___/         |___/                       \n");
+    printf("\n");
+}
+
+void initialMenu(int *reg)
+{
+    printf("******************************\n");
+    printf("**** Log In/Sign Up Menu: ****\n");
+    printf("******************************\n");
+    printf("1- Register Admin:\n");
+    printf("2- Log in as Admin\n");
+
+}
+
 void adminMenu(int *reg) {
     char opc = ' ';
     if (*reg == 2) {
