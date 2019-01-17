@@ -13,12 +13,12 @@
 
 int main()
 {
-    create_db();
-    printf("teste");
-    //readAdm();
-    //int reg = 0;
-    //reg = readReg(&reg);
-    //adminMenu(&reg);
+    //create_db();
+
+    readAdm();
+    int reg = 0;
+    reg = readReg(&reg);
+    adminMenu(&reg);
     //checkAdmin(&reg);
     //listAdm();
     //serialRead();
