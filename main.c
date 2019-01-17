@@ -14,11 +14,12 @@
 
 int main()
 {
+    readAdm();
     initialScreen();
     int reg = 0;
     reg = readReg(&reg);
     initialMenu(&reg);
-    listAdm();
+    //listAdm();
     /*
     char *timestamp;
     checkForDB();

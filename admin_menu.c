@@ -25,8 +25,8 @@ void initialMenu(int *reg)
     printf("3- Log in as worker\n");
     printf("4- Reset Admin:\n");
     printf("5- Exit to desktop\n");
-    int option = -1;
-    scanf("%d", &option);
+    char option =  ' ';
+    scanf("%c", &option);
     switch (option){
         default:{
             printf("Please select a valid a option");
@@ -35,31 +35,31 @@ void initialMenu(int *reg)
             initialMenu(reg);
             break;
         }
-        case 1:{
+        case '1':{
             system("cls");
             initialScreen();
             adminSetup(reg);
             break;
         }
-        case 2:{
+        case '2':{
             system("cls");
             initialScreen();
             checkAdmin(reg);
             break;
         }
-        case 3:{
+        case '3':{
             system("cls");
             initialScreen();
             break;
         }
-        case 4:{
+        case '4':{
             system("cls");
             initialScreen();
             admReset(reg);
             break;
         }
 
-        case 5:{
+        case '5':{
             system("cls");
             initialScreen();
             printf("Exiting ...\n");

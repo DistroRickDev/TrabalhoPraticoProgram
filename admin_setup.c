@@ -5,6 +5,8 @@
 #include "serial_communication.h"
 #include "admin_setup.h"
 #include "admin_menu.h"
+#define ENTER 13 //posição 13 na tabela ascii para enter
+#define BKSC 8 //posição 8 na tabela para o backspace
 
 typedef struct{
     char user[20];
@@ -44,6 +46,7 @@ void adminSetup(int *reg) {
 
 
 void checkAdmin(int *reg) {
+    readAdm();
     char adm[20];
     char psswd[20];
     printf("Let\'s check your identity\n");
@@ -51,14 +54,13 @@ void checkAdmin(int *reg) {
     scanf("%s", adm);
     printf("Password:\n");
     scanf("%s", psswd);
-
+    system("cls");
     while (*reg == 1) {
         if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);
             *reg = 2;
             adminMenu(reg);
-            fflush(stdin);
 
         } else {
             printf("Wrong user or password\n");
@@ -151,8 +153,6 @@ int readReg(int *reg)
 
 void admReset(int *reg) {
     serialRead();
-    admin *ptr = adm_header;
-    admin *aux = adm_header;
     int var;
     var = readToken();
     if (var == 0) {
@@ -168,7 +168,6 @@ void admReset(int *reg) {
                 ptr = ptr->next;
             }
         }*/ // nao remover de comentario
-        free(adm_header);
         remove("admin.bin");
         remove("reg.bin");
         remove("id.txt");
