@@ -15,14 +15,13 @@
 int main()
 {
     //testaru
-    //checkForDB();
+    checkForDB();
     //insertLog("TESTE",1);
-    readAdm();
     //initialScreen();
-
-    int reg = 0;
-    reg = readReg(&reg);
-    initialMenu(&reg);
+    //int reg = 0;
+    //reg = readReg(&reg);
+    //initialMenu(&reg);
+    serialRead();
     //listAdm();
 
     /*
@@ -37,7 +36,12 @@ int main()
 }
 
 
-
+/*
+ * readAdm();
+    char something[]="";
+    readRFID(something);
+    printf("%s\n", something);
+ */
 
 
 

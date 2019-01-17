@@ -12,6 +12,6 @@ int readReg(int *reg);
 void admReset(int *reg);
 void writeToken(char id[]);
 int readToken();
-char *readRFID();
+char *readRFID(char id[]);
 
 #endif //LOGIN_W_STRUCT_ADMIN_SETUP_H

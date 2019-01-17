@@ -95,14 +95,14 @@ void adminMenu(int *reg) {
             }
             case '1':{
                 char name[50];
-                char rfid[10];
+                char rfid[] = "";
                 char password[20];
                 float salary;
                 printf("Type in the workers name\n");
                 scanf("%s",name);
                 printf("Pass the workers card in the readerto register the ID\n");
                 serialRead();
-                *rfid= readToken();
+                readRFID(rfid);
                 printf("Type in the workers password (MAX. 20CHAR.)\n");
                 scanf("%s", password);
                 printf("Type in the workers base salary\n");

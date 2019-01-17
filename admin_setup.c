@@ -227,5 +227,5 @@ char *readRFID(char id[]){
     }
     fscanf(fptr, "%s", id);
     fclose(fptr);
-    return *id;
+    return id;
 }
