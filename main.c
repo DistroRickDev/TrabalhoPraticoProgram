@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <time.h>
 #include "serial_communication.h"
 #include "admin_setup.h"
 #include "admin_menu.h"
@@ -15,6 +16,7 @@ int main()
 {
     checkForDB();
     insertWorker("Adolf Hitler","911911911","roast",911);
+    insertLog("selectrfid",fprintf(stdout, "%lu\n", (unsigned long)time(NULL)), 1);
 
     //int reg = 0;
     //reg = readReg(&reg);

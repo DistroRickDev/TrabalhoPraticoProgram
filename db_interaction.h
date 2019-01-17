@@ -6,4 +6,5 @@
 #define LOGIN_W_STRUCT_DB_INTERACTION_H
 void  checkForDB(void);
 void insertWorker(char *name, char *rfid, char *password, float salary);
+void insertLog(char *rfid, int time, int type);
 #endif //LOGIN_W_STRUCT_DB_INTERACTION_H

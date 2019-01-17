@@ -79,6 +79,34 @@ void checkForDB() {
     }
 }
 
+void insertLog(char *rfid, int time, int type) {
+
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char sql[5000];
+
+    rc = sqlite3_open("checkpointDATA.db", &db);
+
+    if( rc ) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+    } else {
+        fprintf(stderr, "Opened database successfully\n");
+    }
+
+    snprintf( sql, sizeof(sql), "INSERT INTO LOGS VALUES (NULL, '%s', '%s', '%s' );", rfid, time, type);
+
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Records created successfully\n");
+    }
+    sqlite3_close(db);
+}
+
 void insertWorker(char *name, char *rfid, char *password, float salary) {
 
     sqlite3 *db;
@@ -106,3 +134,5 @@ void insertWorker(char *name, char *rfid, char *password, float salary) {
     }
     sqlite3_close(db);
 }
+
+
