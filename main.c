@@ -14,6 +14,7 @@
 int main()
 {
     create_db();
+    printf("teste");
     //readAdm();
     //int reg = 0;
     //reg = readReg(&reg);
