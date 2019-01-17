@@ -4,6 +4,7 @@
 #include <time.h>
 #include "serial_communication.h"
 #include "admin_setup.h"
+#include "admin_menu.h"
 
 typedef struct{
     char user[20];
@@ -56,6 +57,8 @@ void checkAdmin(int *reg) {
             printf("Acess Granted\n");
             printf("Welcome back %s\n", adm_header->user);
             *reg = 2;
+            adminMenu(reg);
+            fflush(stdin);
 
         } else {
             printf("Wrong user or password\n");
@@ -164,7 +167,7 @@ void admReset(int *reg) {
                 }
                 ptr = ptr->next;
             }
-        }*/
+        }*/ // nao remover de comentario
 
         remove("admin.bin");
         remove("reg.bin");
@@ -211,7 +214,7 @@ int readToken(){
     }
     fscanf(fptr, "%s", id);
     token = strcmp(resetToken, id);
-    printf("%d\n FILE: %s\n RESETTOKEN:: %s\n", token, id, resetToken);
+    //printf("%d\n FILE: %s\n RESETTOKEN:: %s\n", token, id, resetToken);
     fclose(fptr);
     return token;
 }

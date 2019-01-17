@@ -16,14 +16,12 @@ int main()
     readAdm();
     int reg = 0;
     reg = readReg(&reg);
-    adminMenu(&reg);
+    //adminMenu(&reg);
     //checkAdmin(&reg);
     //listAdm();
     //serialRead();
     //admReset(&reg);
-    listAdm();
-
-
+    //listAdm();
     return 0;
 }
 

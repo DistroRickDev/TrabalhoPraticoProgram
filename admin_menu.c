@@ -13,6 +13,7 @@ void adminMenu(int *reg) {
         printf("4- Check entrance logs:\n");
         printf("5- Check exit logs:\n");
         printf("0- Logout and exit:\n");
+        fflush(stdin);
         scanf("%c", &opc);
         switch (opc){
             default:{
