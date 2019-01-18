@@ -26,6 +26,7 @@ CMakeFiles/Login_w_struct.dir/serial_communication.c.obj: ../serial_communicatio
 
 CMakeFiles/Login_w_struct.dir/sqlite3.c.obj: ../sqlite3.c
 
+CMakeFiles/Login_w_struct.dir/user_menu.c.obj: ../admin_menu.h
 CMakeFiles/Login_w_struct.dir/user_menu.c.obj: ../admin_setup.h
 CMakeFiles/Login_w_struct.dir/user_menu.c.obj: ../db_interaction.h
 CMakeFiles/Login_w_struct.dir/user_menu.c.obj: ../serial_communication.h

@@ -35,6 +35,7 @@ void userMenu (){
             }
 
             case '2':{
+                initialScreen();
                 char rfid[] = "";
                 printf("Please place card in front of receiver!\n");
                 serialRead();
@@ -48,6 +49,7 @@ void userMenu (){
             }
 
             case '3':{
+                initialScreen();
                 char rfid[] = "";
                 printf("Please place card in front of receiver!\n");
                 serialRead();
@@ -57,6 +59,7 @@ void userMenu (){
                 break;
             }
             case '0':{
+                initialScreen();
                 printf("Logging you out\n");
                 time(1000);
                 return;
