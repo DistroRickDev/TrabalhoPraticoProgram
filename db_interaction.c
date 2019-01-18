@@ -138,4 +138,31 @@ void insertWorker(char *name, char *rfid, char *password, float salary) {
     sqlite3_close(db);
 }
 
+void deleteWorker (char *name){
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char sql[5000];
+
+    rc = sqlite3_open("checkpointDATA.db", &db);
+
+    if( rc ) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+    } else {
+        fprintf(stderr, "Opened database successfully\n");
+    }
+
+    snprintf( sql, sizeof(sql), "DELETE FROM WORKERS WHERE NAME='%s';",name);
+
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Records deleted successfully\n");
+    }
+    sqlite3_close(db);
+}
+
 

@@ -7,4 +7,5 @@
 void  checkForDB(void);
 void insertWorker(char *name, char *rfid, char *password, float salary);
 void insertLog(char *rfid, int type);
+void deleteWorker (char *name);
 #endif //LOGIN_W_STRUCT_DB_INTERACTION_H
