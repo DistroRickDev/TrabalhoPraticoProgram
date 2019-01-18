@@ -1,3 +1,3 @@
-C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/Login_w_struct.dir
-C:/Users/Utilizador/CLionProjects/TrabalhoPraticoProgram/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/Login_w_struct.dir
+C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/rebuild_cache.dir

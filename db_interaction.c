@@ -266,6 +266,41 @@ void listLogs (char *rfid, int type){
 
 }
 
+void listAllLogs (int type){
+
+    sqlite3 *db;
+    char *err_msg = 0;
+
+    int rc = sqlite3_open("checkpointDATA.db", &db);
+
+    if (rc != SQLITE_OK) {
+
+        fprintf(stderr, "Cannot open database: %s\n",
+                sqlite3_errmsg(db));
+        sqlite3_close(db);
+
+    }
+
+    char sql[300];
+    snprintf( sql, sizeof(sql), "SELECT ID,RFID,TIME,TYPE FROM LOGS WHERE TYPE = %d;",type);
+
+
+    rc = sqlite3_exec(db, sql, callback, 0, &err_msg);
+
+    if (rc != SQLITE_OK ) {
+
+        fprintf(stderr, "Failed to select data\n");
+        fprintf(stderr, "SQL error: %s\n", err_msg);
+
+        sqlite3_free(err_msg);
+        sqlite3_close(db);
+
+    }
+
+    sqlite3_close(db);
+
+}
+
 void medTempo (char *rfid){
 
     sqlite3 *db;

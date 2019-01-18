@@ -119,7 +119,30 @@ void adminMenu(int *reg) {
                 scanf("%s", name);
                 deleteWorker(name);
                 adminMenu(reg);
+                break;
             }
+            case '3':{
+                char name[50]=" ";
+                printf("Type the name of the employee you wish to show(type '*' to show all employess)\n");
+                scanf("%s", name);
+                listWorkers(name);
+                adminMenu(reg);
+                break;
+            }
+            case '4':{
+                printf("The entrance logs of your employees are:\n");
+                listAllLogs(0);
+                adminMenu(reg);
+                break;
+            }
+
+            case '5':{
+                printf("The exit logs of your employees are:\n");
+                listAllLogs(1);
+                adminMenu(reg);
+                break;
+            }
+
             case '0':{
                 system("cls");
                 fflush(stdin);

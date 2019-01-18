@@ -12,38 +12,14 @@
 #include "admin_menu.h"
 #include "db_interaction.h"
 
-int main()
-{
-    //testaru
-    listWorkers("Adolf");
-    listLogs ("TESTE", 1); // RFID, TYPE
-    medTempo ("TESTE");
-    //insertLog("TESTE",1);
-    //initialScreen();
+int main() {
     int reg = 0;
     reg = readReg(&reg);
-    initialMenu(&reg);
+    1initialMenu(&reg);
+
     //listAdm();
 
-    /*
-    char *timestamp;
-    checkForDB();
-
-
-    snprintf(timestamp, sizeof(timestamp),"%s",time(NULL));
-    insertLog("selectrfid",(long int)time, 1);
-    */
 
     return 0;
 }
-
-
-/*
- * readAdm();
-    char something[]="";
-    readRFID(something);
-    printf("%s\n", something);
- */
-
-
 

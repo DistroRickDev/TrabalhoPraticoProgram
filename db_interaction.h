@@ -11,4 +11,5 @@ void deleteWorker (char *name);
 void listWorkers (char *name);
 void listLogs (char *rfid, int type);
 void medTempo (char *rfid);
+void listAllLogs (int type);
 #endif //LOGIN_W_STRUCT_DB_INTERACTION_H
