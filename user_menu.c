@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <time.h>
 #include "db_interaction.h"
 #include "serial_communication.h"
 #include "admin_setup.h"
+#include "admin_menu.h"
 
 void userMenu (){
     char opc = ' ';
@@ -53,6 +55,11 @@ void userMenu (){
                 insertLog(rfid,1);
                 userMenu();
                 break;
+            }
+            case '0':{
+                printf("Logging you out\n");
+                time(1000);
+                return;
             }
 
         }
