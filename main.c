@@ -15,7 +15,9 @@
 int main()
 {
     //testaru
-
+    listWorkers("Adolf");
+    listLogs ("TESTE", 1); // RFID, TYPE
+    medTempo ("TESTE");
     //insertLog("TESTE",1);
     //initialScreen();
     int reg = 0;
