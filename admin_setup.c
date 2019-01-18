@@ -38,6 +38,7 @@ void adminSetup(int *reg) {
         *reg = 1;
         writeReg(reg);
         system("cls");
+        adminMenu(reg);
     }
     else{
             checkAdmin(reg);
@@ -175,7 +176,7 @@ void admReset(int *reg) {
         *reg = 0;
         writeReg(reg);
         printf("Adminstrator cleared\n");
-        printf("%d", var);
+        adminSetup(reg);
     }
 }
 

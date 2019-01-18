@@ -5,6 +5,7 @@
 #include "db_interaction.h"
 #include "serial_communication.h"
 
+
 void initialScreen(){
     printf( " _    ____________   _                   _____           _\n");
     printf( "| |   | ___ \\ ___ \\ | |                 /  ___|         | |\n");
@@ -111,6 +112,13 @@ void adminMenu(int *reg) {
                 insertWorker(name,rfid,password,salary);
                 adminMenu(reg);
                 break;
+            }
+            case '2':{
+                char name[50];
+                printf("Type the name of the user you wish to delete\n");
+                scanf("%s", name);
+                deleteWorker(name);
+                adminMenu(reg);
             }
             case '0':{
                 system("cls");

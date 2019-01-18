@@ -18,19 +18,15 @@ int main()
 
     //insertLog("TESTE",1);
     //initialScreen();
-    //insertWorker("Adolf Hitler","911911911","roast",911);
-    deleteWorker("Adolf Hitler");
-
-
-
+    int reg = 0;
+    reg = readReg(&reg);
+    initialMenu(&reg);
     //listAdm();
 
     /*
     char *timestamp;
     checkForDB();
-    int reg = 0;
-    reg = readReg(&reg);
-    initialMenu(&reg);
+
 
     snprintf(timestamp, sizeof(timestamp),"%s",time(NULL));
     insertLog("selectrfid",(long int)time, 1);
