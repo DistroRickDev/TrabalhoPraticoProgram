@@ -17,6 +17,7 @@ typedef struct{
 admin * adm_header = NULL;
 
 void adminSetup(int *reg) {
+    readAdm();
     if (*reg == 0){
         admin *new_Adm = (admin *) malloc(sizeof(admin));
         printf("There is no user set up yet\n");

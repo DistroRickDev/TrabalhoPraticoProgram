@@ -284,6 +284,33 @@ sqlite3.c.s:
 	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/sqlite3.c.s
 .PHONY : sqlite3.c.s
 
+user_menu.obj: user_menu.c.obj
+
+.PHONY : user_menu.obj
+
+# target to build an object file
+user_menu.c.obj:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/user_menu.c.obj
+.PHONY : user_menu.c.obj
+
+user_menu.i: user_menu.c.i
+
+.PHONY : user_menu.i
+
+# target to preprocess a source file
+user_menu.c.i:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/user_menu.c.i
+.PHONY : user_menu.c.i
+
+user_menu.s: user_menu.c.s
+
+.PHONY : user_menu.s
+
+# target to generate assembly for a file
+user_menu.c.s:
+	$(MAKE) -f CMakeFiles\Login_w_struct.dir\build.make CMakeFiles/Login_w_struct.dir/user_menu.c.s
+.PHONY : user_menu.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -311,6 +338,9 @@ help:
 	@echo ... sqlite3.obj
 	@echo ... sqlite3.i
 	@echo ... sqlite3.s
+	@echo ... user_menu.obj
+	@echo ... user_menu.i
+	@echo ... user_menu.s
 .PHONY : help
 
 

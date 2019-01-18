@@ -110,6 +110,12 @@
 		<Unit filename="C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/sqlite3ext.h">
 			<Option target="Login_w_struct"/>
 		</Unit>
+		<Unit filename="C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/user_menu.c">
+			<Option target="Login_w_struct"/>
+		</Unit>
+		<Unit filename="C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/user_menu.h">
+			<Option target="Login_w_struct"/>
+		</Unit>
 		<Unit filename="C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

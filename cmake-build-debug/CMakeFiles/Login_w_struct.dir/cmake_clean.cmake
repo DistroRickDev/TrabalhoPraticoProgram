@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Login_w_struct.dir/serial_communication.c.obj"
   "CMakeFiles/Login_w_struct.dir/db_interaction.c.obj"
   "CMakeFiles/Login_w_struct.dir/sqlite3.c.obj"
+  "CMakeFiles/Login_w_struct.dir/user_menu.c.obj"
   "Login_w_struct.pdb"
   "Login_w_struct.exe"
   "Login_w_struct.exe.manifest"

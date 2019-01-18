@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/main.c" "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/Login_w_struct.dir/main.c.obj"
   "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/serial_communication.c" "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/Login_w_struct.dir/serial_communication.c.obj"
   "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/sqlite3.c" "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/Login_w_struct.dir/sqlite3.c.obj"
+  "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/user_menu.c" "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/CMakeFiles/Login_w_struct.dir/user_menu.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

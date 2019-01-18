@@ -4,7 +4,7 @@
 #include <time.h>
 #include "db_interaction.h"
 #include "serial_communication.h"
-
+#include "user_menu.h"
 
 void initialScreen(){
     printf( " _    ____________   _                   _____           _\n");
@@ -54,6 +54,7 @@ void initialMenu(int *reg)
         case '3':{
             system("cls");
             initialScreen();
+            userMenu();
             break;
         }
         case '4':{
