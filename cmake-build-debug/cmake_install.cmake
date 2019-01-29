@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac
+# Install script for directory: C:/Users/ricar/Documents/TrabalhoPraticoProgram
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/pmsli/CLionProjects/TrabalhoPraticoProgramac/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/ricar/Documents/TrabalhoPraticoProgram/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

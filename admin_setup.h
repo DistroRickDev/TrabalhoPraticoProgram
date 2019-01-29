@@ -5,7 +5,7 @@
 void adminSetup(int *reg);
 void checkAdmin(int *reg);
 void listAdm();
-void admWrite();
+void writeAdm();
 void readAdm();
 int writeReg(int *reg);
 int readReg(int *reg);

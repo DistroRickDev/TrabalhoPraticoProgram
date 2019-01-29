@@ -8,46 +8,37 @@
 #define ENTER 13 //posição 13 na tabela ascii para enter
 #define BKSC 8 //posição 8 na tabela para o backspace
 
-typedef struct{
+typedef struct admin{
     char user[20];
     char password[20];
     struct admin *next;
 }admin;
 
-admin * adm_header = NULL;
+admin *head = NULL;
 
-void adminSetup(int *reg) {
-    readAdm();
-    if (*reg == 0){
-        admin *new_Adm = (admin *) malloc(sizeof(admin));
-        printf("There is no user set up yet\n");
-        printf("Register your user name (max. of 20 chars.):\n");
-        scanf("%s", new_Adm->user);
-        if(strlen(new_Adm->user) > 20){
-            printf("Username must be maximum of 20 chars\n");
-            adminSetup(reg);
-        }
-        printf("Register your password (max. of 20 chars.):\n");
-        scanf("%s", new_Adm->password);
-        if(strlen(new_Adm->password) > 20){
-            printf("Password must be maximum of 20 chars\n");
-            adminSetup(reg);
-        }
-        new_Adm->next = adm_header;
-        adm_header = new_Adm;
-        admWrite();
+void adminSetup(int *reg){
+    admin *newadmin = (admin*)malloc(sizeof(admin));
+    if(*reg == 0) {
+        printf("There is not admin setup yet\n");
+        printf("Please type in your new admin username(20 char max.):\n");
+        scanf("%s", newadmin->user);
+        printf("Please enter your new password (20 char max.):\n");
+        scanf("%s", newadmin->password);
+
+        newadmin->next = head;
+        head = newadmin;
+        writeAdm();
         *reg = 1;
         writeReg(reg);
         system("cls");
         adminMenu(reg);
     }
     else{
-            checkAdmin(reg);
-        }
+        checkAdmin(reg);
+    }
 }
 
-
-void checkAdmin(int *reg) {
+void checkAdmin(int *reg){
     readAdm();
     char adm[20];
     char psswd[20];
@@ -58,10 +49,10 @@ void checkAdmin(int *reg) {
     scanf("%s", psswd);
     system("cls");
     while (*reg == 1) {
-        if (strcmp(adm, adm_header->user) == 0 && strcmp(psswd, adm_header->password) == 0) {
+        if (strcmp(adm, head->user) == 0 && strcmp(psswd, head->password) == 0) {
             printf("Acess Granted\n");
             system("cls");
-            printf("Welcome back %s\n", adm_header->user);
+            printf("Welcome back %s\n", head->user);
             *reg = 2;
             adminMenu(reg);
 
@@ -72,44 +63,51 @@ void checkAdmin(int *reg) {
     }
 }
 
-void admWrite()
-{
-    admin *newadm = adm_header;
+
+
+void writeAdm(){
+    admin *pt = head;
     FILE *fptr;
-    fptr = fopen("admin.bin", "wb");
+    fptr = fopen ("administrator.b","wb");
+
     if(fptr == NULL){
-        printf("No such file found\n");
+        printf("Error\n");
         return;
     }
-    while(newadm != NULL){
-        fwrite(newadm, sizeof(admin), 1, fptr);
-        newadm = newadm->next;
+    while(pt != NULL){
+        fwrite(pt, sizeof(admin), 1, fptr);
+        pt = pt->next;
     }
+
     fclose(fptr);
+
 }
 
-void readAdm()
-{
+void readAdm(){
     FILE *fptr;
-    fptr = fopen("admin.bin", "rb");
+    fptr = fopen ("administrator.b","rb");
+
     if(fptr == NULL){
-        printf("No such file found\n");
+        printf("Error\n");
         return;
     }
+
     while (1){
-        admin *newadm = malloc(sizeof(admin));
-        if (fread(newadm, sizeof(admin),1,fptr)==0 ){
+        admin *newadmin = malloc(sizeof(admin));
+        if (fread(newadmin, sizeof(admin),1,fptr)==0 ){
             fclose(fptr);
             return;
         }
-        newadm->next = adm_header;
-        adm_header = newadm;
+        newadmin->next = head;
+        head = newadmin;
     }
+
     fclose(fptr);
+
 }
 
 void listAdm(){
-    admin *ptr =  adm_header;
+    admin *ptr =  head;
 
     printf("Admin:\tPassword\n");
     while (ptr != NULL) {
@@ -125,7 +123,7 @@ void listAdm(){
 int writeReg(int *reg)
 {
     FILE *fptr;
-    fptr = fopen("reg.bin", "wb");
+    fptr = fopen("regis.bin", "wb");
     if(fptr == NULL){
         printf("No such file found\n");
         *reg = 0;
@@ -144,7 +142,7 @@ int writeReg(int *reg)
 int readReg(int *reg)
 {
     FILE *fptr;
-    fptr = fopen("reg.bin", "rb");
+    fptr = fopen("regis.bin", "rb");
     if(fptr == NULL){
         printf("No such file found\n");
         *reg = 0;

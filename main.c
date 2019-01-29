@@ -13,13 +13,12 @@
 #include "db_interaction.h"
 
 int main() {
+
     initialScreen();
     readAdm();
-    int reg = 0;
-    readReg(&reg);
-    initialMenu(&reg);
-
-   // listAdm();
+    //int reg = readReg(&reg);
+    //initialMenu(&reg);
+    listAdm();
 
 
     return 0;
