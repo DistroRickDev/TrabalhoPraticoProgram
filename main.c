@@ -16,9 +16,10 @@ int main() {
 
     initialScreen();
     readAdm();
-    //int reg = readReg(&reg);
-    //initialMenu(&reg);
-    listAdm();
+    int reg = 0;
+    reg = readReg(&reg);
+    initialMenu(&reg);
+    //listAdm();
 
 
     return 0;

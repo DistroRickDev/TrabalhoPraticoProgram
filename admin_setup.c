@@ -8,7 +8,7 @@
 #define ENTER 13 //posição 13 na tabela ascii para enter
 #define BKSC 8 //posição 8 na tabela para o backspace
 
-typedef struct admin{
+typedef struct {
     char user[20];
     char password[20];
     struct admin *next;
@@ -40,8 +40,8 @@ void adminSetup(int *reg){
 
 void checkAdmin(int *reg){
     readAdm();
-    char adm[20];
-    char psswd[20];
+    char adm[20]="";
+    char psswd[20]="";
     printf("Let\'s check your identity\n");
     printf("User:\n");
     scanf("%s", adm);
@@ -130,13 +130,7 @@ int writeReg(int *reg)
         return *reg;
     }
     fwrite(reg, sizeof(reg), 1, fptr);
-    if (*reg == 1) {
-        return *reg;
-    }
-    else{
-        *reg = 0;
-        return *reg;
-    }
+    fclose(fptr);
 }
 
 int readReg(int *reg)
@@ -149,6 +143,7 @@ int readReg(int *reg)
         adminSetup(reg);
     }
     fread(reg, sizeof(reg), 1, fptr);
+    fclose(fptr);
     return *reg;
 }
 
